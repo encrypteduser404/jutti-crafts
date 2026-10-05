@@ -1,13 +1,3 @@
-export interface FeaturedPieceContent {
-  id: string;
-  reference: string;
-  position: 'first' | 'second' | 'third';
-  title: string;
-  description: string;
-  imageAlt: string;
-  aspectRatio: string;
-}
-
 export const homepageContent = {
   hero: {
     eyebrow: 'JUTTI CRAFTS / DIGITAL ARCHIVE',
@@ -15,8 +5,12 @@ export const homepageContent = {
     description: 'Traditional and contemporary styles from Nagaur, Rajasthan.',
     metadata: 'HANDCRAFTED FOOTWEAR / NAGAUR, RAJASTHAN',
     reference: 'COLLECTION INDEX / 01',
-    aspectRatio: '4 / 3',
-    imageAlt: 'Placeholder for the Jutti Crafts hero image',
+    aspectRatio: '1440 / 1919',
+    imageAlt: 'Pair of green embellished juttis worn on stone paving, with a garden in the background',
+    imageSrc: '/green-latkan-jutti.jpg',
+    imageWidth: 1440,
+    imageHeight: 1919,
+    objectPosition: 'center',
   },
   introduction: {
     eyebrow: 'FIELD NOTES / NAGAUR, RAJASTHAN',
@@ -27,46 +21,11 @@ export const homepageContent = {
   featured: {
     eyebrow: 'SELECTED FOR THE ARCHIVE',
     title: 'Featured pieces',
-    pieces: [
-      {
-        id: 'featured-one',
-        reference: 'REF. 01 / PLACEHOLDER',
-        position: 'first',
-        title: '[Placeholder: product title]',
-        description: '[Placeholder: one-line product description]',
-        imageAlt: 'Placeholder image for featured piece 01',
-        aspectRatio: '4 / 5',
-      },
-      {
-        id: 'featured-two',
-        reference: 'REF. 02 / PLACEHOLDER',
-        position: 'second',
-        title: '[Placeholder: product title]',
-        description: '[Placeholder: one-line product description]',
-        imageAlt: 'Placeholder image for featured piece 02',
-        aspectRatio: '1 / 1',
-      },
-      {
-        id: 'featured-three',
-        reference: 'REF. 03 / PLACEHOLDER',
-        position: 'third',
-        title: '[Placeholder: product title]',
-        description: '[Placeholder: one-line product description]',
-        imageAlt: 'Placeholder image for featured piece 03',
-        aspectRatio: '3 / 4',
-      },
-    ] satisfies FeaturedPieceContent[],
   },
   archive: {
     eyebrow: 'COLLECTION INDEX',
     title: 'THE ARCHIVE',
-    count: '[Collection count pending]',
     introduction: 'An index of Jutti Crafts footwear, to be populated with approved product information.',
-    entrySlots: [
-      { reference: '01', label: 'Entry pending' },
-      { reference: '02', label: 'Entry pending' },
-      { reference: '03', label: 'Entry pending' },
-    ],
   },
   craft: {
     eyebrow: 'FIELD NOTE / NAGAUR, RAJASTHAN',

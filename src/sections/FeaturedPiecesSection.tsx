@@ -1,9 +1,11 @@
 import { ImageFrame } from '../components/ImageFrame';
 import { TextLink } from '../components/TextLink';
 import { homepageContent } from '../data/homepage';
+import { products } from '../data/products';
 
 export function FeaturedPiecesSection() {
   const { featured } = homepageContent;
+  const featuredProducts = products.filter((product) => product.featured);
 
   return (
     <section aria-labelledby="featured-title" className="editorial-section page-container" id="featured">
@@ -16,28 +18,35 @@ export function FeaturedPiecesSection() {
         </div>
       </header>
       <div className="featured-grid">
-        {featured.pieces.map((piece) => (
+        {featuredProducts.map((product, index) => {
+          const image = product.images[0];
+
+          return (
           <article
-            aria-labelledby={`${piece.id}-title`}
-            className={`featured-piece featured-piece--${piece.position}`}
-            key={piece.id}
+            aria-labelledby={`${product.id}-title`}
+            className={`featured-piece featured-piece--${['first', 'second', 'third'][index] ?? 'first'}`}
+            key={product.id}
           >
             <ImageFrame
-              alt={piece.imageAlt}
-              aspectRatio={piece.aspectRatio}
+              alt={image?.alt ?? 'Product image pending'}
+              aspectRatio={image?.aspectRatio ?? '4 / 5'}
               className="featured-piece__image"
-              height={1200}
-              width={960}
+              height={image?.height ?? 1200}
+              objectPosition={image?.objectPosition}
+              src={image?.src}
+              width={image?.width ?? 960}
             />
-            <div className="featured-piece__caption">
-              <p className="featured-piece__reference">{piece.reference}</p>
+            <div
+              className={`featured-piece__caption${product.reference ? '' : ' featured-piece__caption--without-reference'}`}
+            >
+              {product.reference && <p className="featured-piece__reference">{product.reference}</p>}
               <div className="featured-piece__details">
-                <h3 className="featured-piece__title" id={`${piece.id}-title`}>
-                  {piece.title}
+                <h3 className="featured-piece__title" id={`${product.id}-title`}>
+                  {product.name}
                 </h3>
-                <p className="featured-piece__description">{piece.description}</p>
+                <p className="featured-piece__description">{product.description}</p>
                 <TextLink
-                  aria-label={`Explore archive for ${piece.reference}`}
+                  aria-label={`Explore archive for ${product.name}`}
                   className="featured-piece__link"
                   href="#archive"
                 >
@@ -46,7 +55,8 @@ export function FeaturedPiecesSection() {
               </div>
             </div>
           </article>
-        ))}
+          );
+        })}
       </div>
     </section>
   );
