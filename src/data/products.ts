@@ -13,6 +13,7 @@ export const products: Product[] = [
     detailedDescription:
       'Green Latkan Jutti brings together a vivid green upper with intricate white embellishment and a traditional pointed silhouette. Its detailed surface and contrasting brown edging give the piece a distinctly ornate character, presented against a warm architectural setting.',
     featured: true,
+    editorial: false,
     images: [
       {
         src: '/green-latkan-jutti.jpg',
@@ -36,6 +37,7 @@ export const products: Product[] = [
     detailedDescription:
       'Bold Step TPR presents a streamlined black silhouette with a perforated upper and a contrasting light-toned sole. The understated design and dark finish give it a contemporary character, photographed against warm stone architecture.',
     featured: true,
+    editorial: false,
     images: [
       {
         src: '/bold-step-tpr.jpg',
@@ -57,7 +59,8 @@ export const products: Product[] = [
     description: 'A warm natural-tan loafer with clean stitched detailing and a refined low-profile silhouette.',
     detailedDescription:
       'Loafer Natural Tan features a warm tan finish, a streamlined profile and visible stitched detailing across the upper. Its restrained silhouette and darker sole details create a polished visual character in the warm architectural setting of the photograph.',
-    featured: true,
+    featured: false,
+    editorial: false,
     images: [
       {
         src: '/loafer-natural-tan.jpg',
@@ -80,6 +83,7 @@ export const products: Product[] = [
     detailedDescription:
       'Solid Men is presented in a deep brown finish with an elongated slip-on silhouette and subtle stitched detailing across the vamp. Styled with cream trousers, the design creates a restrained contrast against the warm tones of the surrounding setting.',
     featured: false,
+    editorial: false,
     images: [
       {
         src: '/solid-men.jpg',
@@ -102,6 +106,7 @@ export const products: Product[] = [
     detailedDescription:
       'Ethnics presents a dark base highlighted by layered rows of colourful detailing across the upper. Blue, green and pink accents create a lively visual contrast, giving the pair a distinctly decorative ethnic character.',
     featured: false,
+    editorial: false,
     images: [
       {
         src: '/ethnics.jpg',
@@ -120,8 +125,8 @@ export const products: Product[] = [
     description: "A curated view of men's footwear bringing together understated and patterned traditional styles.",
     detailedDescription:
       "Men's Collection brings together contrasting footwear styles within a single visual composition. The image pairs a darker patterned design with a more understated brown style, highlighting the range of silhouettes and visual treatments within the men's selection.",
-    editorial: true,
     featured: false,
+    editorial: true,
     images: [
       {
         src: "/men's collection.jpg",
@@ -143,6 +148,7 @@ export const products: Product[] = [
     detailedDescription:
       'Embroidered Flats brings colour and pattern together through a richly decorated upper featuring floral-inspired motifs and contrasting tones. The detailed surface is balanced by warm brown edging, creating a lively and distinctly decorative look.',
     featured: false,
+    editorial: false,
     images: [
       {
         src: '/Embroidered-Flats.jpg',
@@ -165,6 +171,7 @@ export const products: Product[] = [
     detailedDescription:
       'Ethnic Mojaris Flats features a refined flat silhouette decorated with a colourful floral composition across the upper. Blue, green and pink tones contrast with the warm brown edging, while the clean neutral background keeps attention on the footwear itself.',
     featured: false,
+    editorial: false,
     images: [
       {
         src: '/Ethnic-Mojaris-Flats.jpg',
@@ -172,6 +179,95 @@ export const products: Product[] = [
         aspectRatio: '3 / 4',
         width: 1080,
         height: 1440,
+      },
+    ],
+  },
+  {
+    id: 'flats',
+    name: 'Flats',
+    category: 'Flats',
+    color: 'Dark blue / black',
+    style: 'Decorative / expressive',
+    detailing: 'Pink, purple and green multicolour patterned detailing',
+    occasion: 'Festive / ethnic styling',
+    description: 'A dark-toned pair of flats highlighted by intricate pink and multicolour decorative detailing.',
+    detailedDescription:
+      'Flats combines a dark base with an expressive patterned upper featuring pink, purple and green accents. The detailed surface gives the pair a colourful, decorative character while the darker base keeps the overall composition balanced.',
+    featured: false,
+    editorial: false,
+    images: [
+      {
+        src: '/flats.jpg',
+        alt: 'Dark flats with colourful pink and multicolour detailing photographed with floral accents.',
+        aspectRatio: '3277 / 4096',
+        width: 3277,
+        height: 4096,
+      },
+    ],
+  },
+  {
+    id: 'royal-men-jutti',
+    name: 'Royal Men Jutti',
+    category: "Men's Editorial",
+    style: 'Royal / refined / traditional',
+    description: "A Jutti Crafts editorial composition presenting men's footwear against a refined architectural backdrop.",
+    detailedDescription:
+      'Royal Men Jutti presents a stylised men\'s footwear composition framed within a warm architectural setting. The promotional artwork combines the footwear with Jutti Crafts branding and a refined visual treatment, functioning naturally as an editorial brand piece rather than a single product view.',
+    featured: false,
+    editorial: true,
+    images: [
+      {
+        src: '/royal men jutti.jpeg',
+        alt: "Jutti Crafts promotional composition featuring men's footwear.",
+        aspectRatio: '825 / 1024',
+        width: 825,
+        height: 1024,
+      },
+    ],
+  },
+  {
+    id: 'punjabi-jutti',
+    name: 'Punjabi Jutti',
+    category: 'Punjabi Jutti',
+    color: 'Dark blue / black',
+    style: 'Traditional / colourful',
+    detailing: 'Multicolour floral-inspired pattern',
+    occasion: 'Festive / ethnic styling',
+    description: 'A dark Punjabi jutti accented with colourful floral-inspired detailing.',
+    detailedDescription:
+      'Punjabi Jutti combines a deep dark base with colourful decorative detailing across the upper. Blue, yellow, pink and green accents create a lively floral-inspired composition, presented against a clean studio-style background.',
+    featured: false,
+    editorial: false,
+    images: [
+      {
+        src: '/punjabi jutti.jpeg',
+        alt: 'Pair of dark Punjabi juttis with colourful floral detailing.',
+        aspectRatio: '2 / 3',
+        width: 681,
+        height: 1024,
+      },
+    ],
+  },
+  {
+    id: 'female-jutti',
+    name: 'Female Jutti',
+    category: "Women's Jutti",
+    color: 'Warm tan / brown',
+    style: 'Colourful / festive / expressive',
+    detailing: 'Multicolour floral embroidery/detailing',
+    occasion: 'Festive / traditional styling',
+    description: 'A colourful floral jutti featuring vibrant embroidered detailing and warm-toned edging.',
+    detailedDescription:
+      'Female Jutti features a warm-toned base decorated with vivid floral detailing in pink, yellow, blue and green. The colourful upper is framed by warm brown edging, while the surrounding floral setting reinforces its expressive and festive character.',
+    featured: true,
+    editorial: false,
+    images: [
+      {
+        src: '/female jutti.jpeg',
+        alt: 'Colourful floral jutti photographed with decorative flowers.',
+        aspectRatio: '1228 / 1536',
+        width: 1228,
+        height: 1536,
       },
     ],
   },

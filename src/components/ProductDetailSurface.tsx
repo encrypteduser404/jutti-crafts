@@ -18,6 +18,11 @@ export function ProductDetailSurface({
   onNavigate,
 }: ProductDetailSurfaceProps) {
   const dialogRef = useRef<HTMLDialogElement>(null);
+  const entryType = product?.editorial
+    ? product.category === "Men's Collection"
+      ? 'Collection'
+      : 'Editorial'
+    : undefined;
 
   useEffect(() => {
     const dialog = dialogRef.current;
@@ -74,11 +79,28 @@ export function ProductDetailSurface({
           </header>
           <div className="product-detail__content">
             <div className="product-detail__intro">
-              {product.editorial && <p className="product-detail__type">Collection</p>}
+              {entryType && <p className="product-detail__type">{entryType}</p>}
               <h2 className="product-detail__title" id="product-detail-title">
                 {product.name}
               </h2>
               <p className="product-detail__description">{product.detailedDescription}</p>
+              <dl className="product-detail__metadata">
+                {product.category && (
+                  <div><dt>Category</dt><dd>{product.category}</dd></div>
+                )}
+                {product.color && (
+                  <div><dt>Colour</dt><dd>{product.color}</dd></div>
+                )}
+                {product.style && (
+                  <div><dt>Style</dt><dd>{product.style}</dd></div>
+                )}
+                {product.detailing && (
+                  <div><dt>Detailing</dt><dd>{product.detailing}</dd></div>
+                )}
+                {product.occasion && (
+                  <div><dt>Occasion</dt><dd>{product.occasion}</dd></div>
+                )}
+              </dl>
             </div>
             <div aria-label="Product images" className="product-detail__gallery">
               {product.images.map((image, imageIndex) => (
@@ -95,12 +117,6 @@ export function ProductDetailSurface({
                 />
               ))}
             </div>
-            <p className="product-detail__inquiry-note" id="inquiry-note">
-              Official inquiry destination pending.
-            </p>
-            <button aria-describedby="inquiry-note" className="product-detail__inquiry" disabled type="button">
-              Inquiry details pending
-            </button>
           </div>
           <footer className="product-detail__footer">
             <button className="product-detail__navigation" onClick={() => onNavigate(-1)} type="button">

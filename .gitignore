@@ -2,3 +2,15 @@ node_modules/
 dist/
 dist-ssr/
 *.local
+.env
+.env.*
+*.key
+*credentials*
+*secrets*
+*.tmp
+*.temp
+*.log
+*.swp
+*.swo
+*.bak
+*~

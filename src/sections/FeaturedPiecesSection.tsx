@@ -5,7 +5,10 @@ import { products } from '../data/products';
 
 export function FeaturedPiecesSection() {
   const { featured } = homepageContent;
-  const featuredProducts = products.filter((product) => product.featured);
+  const featuredOrder = ['green-latkan-jutti', 'female-jutti', 'bold-step-tpr'];
+  const featuredProducts = products
+    .filter((product) => product.featured)
+    .sort((first, second) => featuredOrder.indexOf(first.id) - featuredOrder.indexOf(second.id));
 
   return (
     <section aria-labelledby="featured-title" className="editorial-section page-container" id="featured">
@@ -28,7 +31,7 @@ export function FeaturedPiecesSection() {
             key={product.id}
           >
             <ImageFrame
-              alt={image?.alt ?? 'Product image pending'}
+              alt={image?.alt ?? product.name}
               aspectRatio={image?.aspectRatio ?? '4 / 5'}
               className="featured-piece__image"
               height={image?.height ?? 1200}

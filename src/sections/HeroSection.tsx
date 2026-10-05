@@ -12,9 +12,11 @@ export function HeroSection() {
           alt={hero.imageAlt}
           aspectRatio={hero.aspectRatio}
           className="hero__visual"
-          height={900}
+          height={hero.imageHeight}
+          objectPosition={hero.objectPosition}
           priority
-          width={1200}
+          src={hero.imageSrc}
+          width={hero.imageWidth}
         />
         <div className="hero__copy">
           <p className="eyebrow">{hero.eyebrow}</p>
@@ -27,7 +29,6 @@ export function HeroSection() {
           </TextLink>
           <div className="hero__metadata">
             <span>{hero.metadata}</span>
-            <span aria-hidden="true">{hero.reference}</span>
           </div>
         </div>
       </div>

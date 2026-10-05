@@ -380,7 +380,7 @@ a:hover {
 
 .instagram-heading {
   max-width: 36rem;
-  margin-block-end: 2rem;
+  margin-block-end: 1.25rem;
 }
 
 .instagram-heading .section-heading {
@@ -891,8 +891,8 @@ a:hover {
 .instagram-grid {
   grid-template-columns: repeat(12, minmax(0, 1fr));
   grid-template-rows: auto auto;
-  column-gap: 1rem;
-  row-gap: 1.75rem;
+  column-gap: 1.25rem;
+  row-gap: 1.25rem;
   align-items: start;
 }
 
@@ -904,7 +904,7 @@ a:hover {
 .instagram-grid__item--two {
   grid-column: 4 / span 3;
   grid-row: 1;
-  margin-block-start: 2.5rem;
+  margin-block-start: 1.25rem;
 }
 
 .instagram-grid__item--three {
@@ -913,7 +913,7 @@ a:hover {
 }
 
 .instagram-grid__item--four {
-  grid-column: 3 / span 4;
+  grid-column: 3 / span 3;
   grid-row: 2;
 }
 
@@ -994,7 +994,7 @@ a:hover {
   }
 
   .instagram-grid__item--four {
-    grid-column: 2 / span 4;
+    grid-column: 2 / span 3;
   }
 }
 
@@ -1257,7 +1257,7 @@ a:hover {
   .instagram-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-template-rows: auto auto;
-    gap: 0.75rem;
+    gap: 1rem;
   }
 
   .instagram-grid__item--one,
@@ -1269,17 +1269,12 @@ a:hover {
     margin-block-start: 0;
   }
 
-  .instagram-grid__item--two {
-    margin-block-start: 1.75rem;
-  }
-
   .instagram-grid__item--three {
     grid-column: 1 / span 1;
   }
 
   .instagram-grid__item--four {
     grid-column: 2 / span 1;
-    margin-block-start: 1rem;
   }
 
   .contact-section {
@@ -1509,9 +1504,114 @@ a:hover {
   line-height: 1.6;
 }
 
+.product-detail__metadata {
+  display: grid;
+  gap: 0.6rem;
+  margin: 1.25rem 0 0;
+  padding-block-start: 1rem;
+  border-top: 1px solid var(--dusty-rose);
+  font-size: 0.875rem;
+  line-height: 1.45;
+}
+
+.product-detail__metadata > div {
+  display: grid;
+  grid-template-columns: minmax(5.5rem, 0.7fr) minmax(0, 1.3fr);
+  gap: 0.75rem;
+}
+
+.product-detail__metadata dt {
+  color: var(--madder);
+}
+
+.product-detail__metadata dd {
+  margin: 0;
+}
+
 .product-detail__gallery {
   display: grid;
   gap: 1.25rem;
+}
+
+.instagram-section {
+  margin-block-start: clamp(3rem, 5vw, 4.5rem);
+}
+
+.instagram-heading {
+  max-width: none;
+  margin-block-end: 1rem;
+}
+
+.instagram-heading .section-heading {
+  margin-block: 0.25rem 0;
+  font-size: clamp(1.75rem, 2.5vw, 2.25rem);
+}
+
+.instagram-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-rows: auto auto;
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.instagram-grid__item {
+  min-width: 0;
+  margin-block-start: 0;
+}
+
+.instagram-grid__item--one {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.instagram-grid__item--two {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.instagram-grid__item--three {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.instagram-grid__item--four {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.instagram-grid__image img {
+  object-fit: contain;
+}
+
+@media (max-width: 64rem) {
+  .instagram-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 42rem) {
+  .instagram-section {
+    margin-block-start: 2.5rem;
+  }
+
+  .instagram-heading .section-heading {
+    font-size: 1.75rem;
+  }
+
+  .instagram-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: auto auto;
+    gap: 0.75rem;
+  }
+
+  .instagram-grid__item--one,
+  .instagram-grid__item--two,
+  .instagram-grid__item--three,
+  .instagram-grid__item--four {
+    grid-column: auto;
+    grid-row: auto;
+    margin-block-start: 0;
+  }
 }
 
 .product-detail__image {

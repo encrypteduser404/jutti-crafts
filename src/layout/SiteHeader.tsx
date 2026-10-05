@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import { TextLink } from '../components/TextLink';
-import { BrandMarkPlaceholder } from '../components/BrandMarkPlaceholder';
+import { BrandMark } from '../components/BrandMark';
 
 export function SiteHeader() {
   const menuRef = useRef<HTMLDialogElement>(null);
@@ -16,7 +16,7 @@ export function SiteHeader() {
           <TextLink href="#archive">Archive</TextLink>
           <TextLink href="#craft">Story / Craft</TextLink>
         </nav>
-        <BrandMarkPlaceholder />
+        <BrandMark />
         <nav aria-label="Brand and contact navigation" className="site-navigation site-navigation--right">
           <TextLink href="#instagram">Instagram</TextLink>
           <TextLink href="#contact">Inquire</TextLink>
@@ -54,7 +54,7 @@ export function SiteHeader() {
             <TextLink href="#instagram" onClick={closeMenu}>Instagram</TextLink>
             <TextLink href="#contact" onClick={closeMenu}>Inquire</TextLink>
           </nav>
-          <BrandMarkPlaceholder />
+          <BrandMark />
         </div>
       </dialog>
     </header>

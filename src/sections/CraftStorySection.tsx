@@ -9,19 +9,18 @@ export function CraftStorySection() {
       <div className="craft-grid">
         <ImageFrame
           alt={craft.imageAlt}
-          aspectRatio="1 / 1"
+          aspectRatio={craft.imageAspectRatio}
           className="craft__visual"
-          height={1000}
-          width={1000}
+          height={craft.imageHeight}
+          width={craft.imageWidth}
+          src={craft.imageSrc}
         />
         <div className="craft__copy">
-          <p className="craft__reference">{craft.reference}</p>
-          <p className="eyebrow">{craft.eyebrow}</p>
+          {craft.eyebrow && <p className="eyebrow">{craft.eyebrow}</p>}
           <h2 className="section-heading" id="craft-title">
             {craft.title}
           </h2>
           <p>{craft.description}</p>
-          <p>{craft.missingInformation}</p>
         </div>
       </div>
     </section>

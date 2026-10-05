@@ -6,6 +6,7 @@ interface ImageFrameProps {
   width: number;
   height: number;
   aspectRatio?: string;
+  objectPosition?: string;
   loading?: 'eager' | 'lazy';
   priority?: boolean;
   className?: string;
@@ -17,6 +18,7 @@ export function ImageFrame({
   width,
   height,
   aspectRatio,
+  objectPosition = 'center',
   loading = 'lazy',
   priority = false,
   className = '',
@@ -35,12 +37,11 @@ export function ImageFrame({
           loading={priority ? 'eager' : loading}
           fetchPriority={priority ? 'high' : 'auto'}
           src={src}
+          style={{ objectPosition }}
           width={width}
         />
       ) : (
-        <div className="image-frame__placeholder" role="img" aria-label={alt}>
-          <span>Image pending</span>
-        </div>
+        <div className="image-frame__placeholder" role="img" aria-label={alt} />
       )}
     </div>
   );
