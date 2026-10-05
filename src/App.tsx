@@ -1,5 +1,6 @@
 import { SiteFooter } from './layout/SiteFooter';
 import { SiteHeader } from './layout/SiteHeader';
+import { HomePage } from './sections/HomePage';
 
 export default function App() {
   return (
@@ -9,7 +10,9 @@ export default function App() {
       </a>
       <div className="site-shell">
         <SiteHeader />
-        <main className="site-main" id="main-content" />
+        <main className="site-main" id="main-content">
+          <HomePage />
+        </main>
         <SiteFooter />
       </div>
     </>
