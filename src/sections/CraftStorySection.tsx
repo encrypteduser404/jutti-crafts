@@ -15,6 +15,7 @@ export function CraftStorySection() {
           width={1000}
         />
         <div className="craft__copy">
+          <p className="craft__reference">{craft.reference}</p>
           <p className="eyebrow">{craft.eyebrow}</p>
           <h2 className="section-heading" id="craft-title">
             {craft.title}

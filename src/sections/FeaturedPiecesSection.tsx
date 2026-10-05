@@ -16,10 +16,10 @@ export function FeaturedPiecesSection() {
         </div>
       </header>
       <div className="featured-grid">
-        {featured.pieces.map((piece, index) => (
+        {featured.pieces.map((piece) => (
           <article
             aria-labelledby={`${piece.id}-title`}
-            className={`featured-piece featured-piece--${['one', 'two', 'three'][index]}`}
+            className={`featured-piece featured-piece--${piece.position}`}
             key={piece.id}
           >
             <ImageFrame
@@ -29,18 +29,22 @@ export function FeaturedPiecesSection() {
               height={1200}
               width={960}
             />
-            <p className="featured-piece__reference">{piece.reference}</p>
-            <h3 className="featured-piece__title" id={`${piece.id}-title`}>
-              {piece.title}
-            </h3>
-            <p className="featured-piece__description">{piece.description}</p>
-            <TextLink
-              aria-label={`Explore archive for ${piece.reference}`}
-              className="featured-piece__link"
-              href="#archive"
-            >
-              Explore archive
-            </TextLink>
+            <div className="featured-piece__caption">
+              <p className="featured-piece__reference">{piece.reference}</p>
+              <div className="featured-piece__details">
+                <h3 className="featured-piece__title" id={`${piece.id}-title`}>
+                  {piece.title}
+                </h3>
+                <p className="featured-piece__description">{piece.description}</p>
+                <TextLink
+                  aria-label={`Explore archive for ${piece.reference}`}
+                  className="featured-piece__link"
+                  href="#archive"
+                >
+                  View archive entry
+                </TextLink>
+              </div>
+            </div>
           </article>
         ))}
       </div>

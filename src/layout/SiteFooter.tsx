@@ -7,15 +7,13 @@ export function SiteFooter() {
         <Divider />
         <section aria-labelledby="contact-title" className="contact-section" id="contact">
           <div>
-            <p className="eyebrow">Contact</p>
+            <p className="eyebrow">Jutti Crafts (OPC) Private Limited</p>
             <h2 className="contact-section__title" id="contact-title">
-              Jutti Crafts
+              Nagaur, Rajasthan
             </h2>
           </div>
           <div className="contact-section__details">
-            <p>[Placeholder: approved contact details pending.]</p>
-            <p>Jutti Crafts (OPC) Private Limited</p>
-            <p>Nagaur, Rajasthan</p>
+            <p>Official Instagram, email and contact details pending.</p>
           </div>
         </section>
       </div>

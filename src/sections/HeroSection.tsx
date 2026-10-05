@@ -10,7 +10,7 @@ export function HeroSection() {
       <div className="page-container hero__grid">
         <ImageFrame
           alt={hero.imageAlt}
-          aspectRatio="4 / 3"
+          aspectRatio={hero.aspectRatio}
           className="hero__visual"
           height={900}
           priority
@@ -25,7 +25,10 @@ export function HeroSection() {
           <TextLink className="hero__cta" href="#archive">
             Explore the Archive
           </TextLink>
-          <p className="hero__metadata">{hero.metadata}</p>
+          <div className="hero__metadata">
+            <span>{hero.metadata}</span>
+            <span aria-hidden="true">{hero.reference}</span>
+          </div>
         </div>
       </div>
     </section>

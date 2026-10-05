@@ -17,9 +17,14 @@ export function ArchiveSection() {
         </p>
       </div>
       <p className="archive__introduction">{archive.introduction}</p>
-      <div className="archive-empty">
-        <p>{archive.emptyState}</p>
-      </div>
+      <ol aria-label="Future archive entries" className="archive-index">
+        {archive.entrySlots.map((entry) => (
+          <li className="archive-index__entry" key={entry.reference}>
+            <span className="archive-index__reference">{entry.reference}</span>
+            <span>{entry.label}</span>
+          </li>
+        ))}
+      </ol>
     </section>
   );
 }
