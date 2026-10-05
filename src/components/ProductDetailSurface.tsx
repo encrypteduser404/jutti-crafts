@@ -74,6 +74,7 @@ export function ProductDetailSurface({
           </header>
           <div className="product-detail__content">
             <div className="product-detail__intro">
+              {product.editorial && <p className="product-detail__type">Collection</p>}
               <h2 className="product-detail__title" id="product-detail-title">
                 {product.name}
               </h2>
